@@ -1,26 +1,25 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        notatka notatka = new notatka("brak", "lody");
-        notatka.diagnostyka();
-        System.out.println("medota ktora wyswietla tytul i tresc: ");
-
-        notatka.WysiwietlTytulTresc();
+        //wyszukiwanie linowe (zadanie na 5)
+        ArrayList<Integer> parzyste = new ArrayList<>();
+        for(int i = 200; i <301; i = i + 2) {
+            parzyste.add(i);
+        }
+        System.out.println(parzyste);
+        //zapytaj o liczbe i podaj jakim indeksem jest
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj tersc notatki: ");
-        String tresc = scanner.next();
-        System.out.println("Podaj tytul notatki: ");
-        String tytul = scanner.next();
-
-        notatka notatka1 = new notatka(tytul, tresc);
-        System.out.println("testowanie metody diagnostyka");
-        notatka1.diagnostyka();
-        System.out.println("testowanie metody wyspietlajacej tytul i tresc ");
-
-        notatka1.WysiwietlTytulTresc();
+        System.out.println("Podaj szuakna liczbe: ");
+        int liczbaszukana = scanner.nextInt();
+        for(int i = 0; i < parzyste.size(); i++){
+            if(parzyste.get(i).equals(liczbaszukana)){
+                System.out.println("indeks wynosi: " + i);
+                break;
+            }
+        }
+        //wyszukiwanie binarne (zadanie na 6)
     }
 }
 
-// kartkowka obiektowe i kolekcja
