@@ -1,15 +1,26 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        notatka notatka = new notatka("brak", "lody");
+        notatka.diagnostyka();
+        System.out.println("medota ktora wyswietla tytul i tresc: ");
+
+        notatka.WysiwietlTytulTresc();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj tersc notatki: ");
+        String tresc = scanner.next();
+        System.out.println("Podaj tytul notatki: ");
+        String tytul = scanner.next();
+
+        notatka notatka1 = new notatka(tytul, tresc);
+        System.out.println("testowanie metody diagnostyka");
+        notatka1.diagnostyka();
+        System.out.println("testowanie metody wyspietlajacej tytul i tresc ");
+
+        notatka1.WysiwietlTytulTresc();
     }
 }
+
+// kartkowka obiektowe i kolekcja
